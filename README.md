@@ -1,4 +1,0 @@
-Demo.Mocks
-==========
-
-Demo.Mocks
