@@ -1,0 +1,71 @@
+﻿SCENARIOS
+
+1.  State-Based Verification (Black Box/Stubs)
+
+	a.	Creating a Substitute*
+	b.  Creating a Substitute for Multiple Interfaces*
+	c.  Setting Property Return Values*
+
+		REFACTOR repository, service to SETUP
+
+		[Test]
+		public void given_patient_exists_when_getting_patient_should_return_patient()
+		{}
+
+
+	d.	Setting Method Return Values For Specific Values*
+	e.	Setting Method Return Values for Non-Specific Values*
+	f.	Setting Method Return Values for Conditional Matching (NO DEMO)
+
+	    [Test]
+        public void given_new_patient_when_adding_should_return_new_id()
+        {}
+
+	g.  Multiple Return Values
+
+		[Test]
+        public void given_repository_fails_when_getting_patients_should_return_empty_list()
+        {}
+
+	h.  Throwing Exceptions
+
+		REFACTOR PatientService to call Repository.Add(patient, out newId);
+
+		[Test]
+        public void given_patient_does_not_exist_when_adding_should_return_id_as_out_parameter()
+        {
+            int newId;
+            _repository.WhenForAnyArgs(x => x.Add(null, out newId)).Do(x => { x[1] = 3; });
+
+            Assert.That(_service.AddPatient(new Patient()), Is.EqualTo(3));
+        }
+
+	i.  Out parameters
+
+		[Test]
+        public void given_one_mock_substitute_when_setting_properties_for_recursive_levels_of_depth_should_return_values_set_without_errors()
+        {}
+
+	j.	Recursive Mocks
+
+2.  Interaction-Based Verification (White Box/Mocks)
+
+		REFACTOR Add the SecurityService as a Dependency for PatientService;  Set up return true for IsInRole for SetUp();
+
+	    [Test]
+        public void given_user_is_not_in_admin_role_when_getting_patient_should_not_return_patient()
+        {
+            _securityService.IsInRole("Admin").Returns(false);
+            _repository.Get(5).Returns(new Patient());
+            var patient = _service.GetPatient(5);
+            Assert.That(patient, Is.Null);
+
+            //_repository.DidNotReceive().Get(5);
+            //_securityService.Received().IsInRole("Admin");
+        }
+
+	a.	Checking Received Calls - once, never, multiple times*
+	b.  Checking Calls to Properties/Indexers (NO DEMO)
+	c.  Callbacks - Returns for Return Value Members and When...Do for Void Members (NO DEMO)
+	d.	Raising Events*
+

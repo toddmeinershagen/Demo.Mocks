@@ -1,0 +1,9 @@
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\bin\Debug\Demo.Mocks.UnitTests.dll
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\bin\Debug\Demo.Mocks.UnitTests.pdb
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\bin\Debug\NSubstitute.dll
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\bin\Debug\nunit.framework.dll
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\bin\Debug\NSubstitute.xml
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\bin\Debug\nunit.framework.xml
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\obj\Debug\Demo.Mocks.UnitTests.dll
+C:\Users\tmeinershagen\Documents\Visual Studio 2010\Projects\Demo.Mocks\Demo.Mocks.UnitTests\obj\Debug\Demo.Mocks.UnitTests.pdb
